@@ -12,7 +12,7 @@ puts "Creating the ingredient list from the Wagon list"
 
 ingredients["drinks"].each do |ingredient|
   # puts ingredient["strIngredient1"]
-  Ingredient.create(ingredient[:strIngredient1])
+  Ingredient.create(name: ingredient["strIngredient1"])
 end
 
 puts "Database ready"
