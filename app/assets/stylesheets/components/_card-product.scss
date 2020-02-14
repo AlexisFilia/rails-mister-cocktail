@@ -9,7 +9,7 @@
   border-radius: 5px;
 }
 
-.card-product img {
+.card-product-img {
   height: 100%;
   width: 120px;
   object-fit: cover;
@@ -31,4 +31,8 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+
+  a {
+    color: black;
+  }
 }

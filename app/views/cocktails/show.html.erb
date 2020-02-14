@@ -1,6 +1,6 @@
-<div class="container">
+<div class="page-container">
   <h1><%= @cocktail.name %></h1>
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" class="cocktail-img"/>
+  <%= cl_image_tag @cocktail.photo.key, class: "card-product-img" %>
 
   <% @cocktail.doses.each do |dose| %>
     <div class="card-cocktail-description">
@@ -9,10 +9,10 @@
       </div>
       <div class="card-cocktail-description">
         <h3><%= dose.description %></h3>
-        <%= link_to "Delete dose", dose_path(dose),
-          method: :delete,
-          data: { confirm: "Are you sure?" } %>
       </div>
+      <%= link_to "Delete dose", dose_path(dose),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
     </div>
   <% end %>
   <%= link_to "Add new dose", new_cocktail_dose_path(params[:id]), class: "btn btn-add" %>
