@@ -13,8 +13,8 @@
     <% end %>
     <%= f.input :ingredient, collection: Ingredient.all %>
     <%= f.input :description %>
-    <%= f.submit "Add new dose", class: "btn btn-primary" %>
+    <%= f.submit "Add new dose", class: "btn btn-add" %>
   <% end %>
 
-  <%= link_to "Back to cocktail ...", cocktail_path(@cocktail) %>
+  <%= link_to "Back to cocktail ...", cocktail_path(@cocktail), class: "btn btn-back" %>
 </div>

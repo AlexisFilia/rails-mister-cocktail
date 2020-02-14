@@ -1,14 +1,21 @@
 <div class="container">
   <h1><%= @cocktail.name %></h1>
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" class="cocktail-img"/>
 
   <% @cocktail.doses.each do |dose| %>
-    <h2><%= dose.description %></h2>
-    <h3><%= dose.ingredient.name %></h3>
-    <%= link_to "Delete dose", dose_path(dose),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
+    <div class="card-cocktail-description">
+      <div class="card-cocktail-description-name">
+        <h2><%= dose.ingredient.name %></h2>
+      </div>
+      <div class="card-cocktail-description">
+        <h3><%= dose.description %></h3>
+        <%= link_to "Delete dose", dose_path(dose),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
   <% end %>
-  <%= link_to "Add new dose", new_cocktail_dose_path(params[:id]) %>
+  <%= link_to "Add new dose", new_cocktail_dose_path(params[:id]), class: "btn btn-add" %>
 
-  <%= link_to "Back to cocktail's list", cocktails_path %>
+  <%= link_to "Back to cocktail's list", cocktails_path, class: "btn btn-back" %>
 </div>

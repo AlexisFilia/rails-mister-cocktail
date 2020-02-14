@@ -1,7 +1,9 @@
 .banner {
   background-image: url(banner.jpg);
   background-size: cover;
-  height: 450px;
+  position: sticky;
+  top: 0px;
+  height: 30vh;
 
   h1 {
     font-size: 50px;

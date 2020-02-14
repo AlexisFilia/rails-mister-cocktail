@@ -12,8 +12,8 @@
       </div>
     <% end %>
     <%= f.input :name %>
-    <%= f.submit "New cocktail", class: "btn btn-primary" %>
+    <%= f.submit "New cocktail", class: "btn btn-add" %>
   <% end %>
 
-  <%= link_to "Back to cocktail's list", cocktails_path %>
+  <%= link_to "Back to cocktail's list", cocktails_path, class: "btn btn-back" %>
 </div>
