@@ -6,7 +6,10 @@ ingredients_serialized = open(url).read
 ingredients = JSON.parse(ingredients_serialized)
 
 puts "Cleaning the database"
+
+Dose.destroy_all
 Ingredient.destroy_all
+Cocktail.destroy_all
 
 puts "Creating the ingredient list from the Wagon list"
 
