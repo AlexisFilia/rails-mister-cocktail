@@ -1,5 +1,6 @@
 .banner {
-  background: "banner.jpg";
+  background-image: url(banner.jpg);
+  background-size: cover;
   height: 450px;
 
   h1 {
